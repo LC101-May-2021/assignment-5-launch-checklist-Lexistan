@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-    const $form = document.querySelector('form');
+    const form = document.querySelector('form');
   
     let listedPlanets;
     let listedPlanetsResponse = myFetch();
@@ -22,29 +22,29 @@ window.addEventListener('load', function () {
         );
       });
   
-    let $list = document.getElementById('faultyItems');
-    const $list.style.visibility = 'hidden';
+    let list = document.getElementById('faultyItems');
+    list.style.visibility = 'hidden';
   
-    $form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', function (event) {
       event.preventDefault();
-      const $pilotValue = document.querySelector('input[name=pilotName]').value;
-      const $copilotValue = document.querySelector(
+      const pilotValue = document.querySelector('input[name=pilotName]').value;
+      const copilotValue = document.querySelector(
         'input[name=copilotName]'
       ).value;
-      const $fuelLevelValue = document.querySelector(
+      const fuelLevelValue = document.querySelector(
         'input[name=fuelLevel]'
       ).value;
-      const $cargoMassValue = document.querySelector(
+      const cargoMassValue = document.querySelector(
         'input[name=cargoMass]'
       ).value;
   
       formSubmission(
         document,
-        $list,
-        $pilotValue,
-        $copilotValue,
-        $fuelLevelValue,
-        $cargoMassValue
+        list,
+        pilotValue,
+        copilotValue,
+        fuelLevelValue,
+        cargoMassValue
       );
     });
   });
